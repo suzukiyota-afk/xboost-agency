@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X-Boost｜X（Twitter）運用代行の専門エージェンシー</title>
+<meta name="description" content="X（Twitter）運用のプロフェッショナル集団。フォロワー増加・エンゲージメント向上・売上直結のX運用を完全代行します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1a1a2e;
+  --primary-light: #16213e;
+  --accent: #1DA1F2;
+  --accent-dark: #0d8ddb;
+  --accent-light: #e8f5fd;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f1f3f5;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #adb5bd;
+  --gray-500: #6c757d;
+  --gray-600: #495057;
+  --gray-700: #343a40;
+  --gray-800: #212529;
+  --gold: #f0c040;
+  --success: #28a745;
+  --gradient-hero: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+  --gradient-cta: linear-gradient(135deg, #0f3460 0%, #1a1a2e 50%, #16213e 100%);
+  --gradient-accent: linear-gradient(135deg, #1DA1F2 0%, #0d8ddb 100%);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  --shadow-xl: 0 16px 60px rgba(0,0,0,0.16);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font: 'Noto Sans JP', sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--gray-700);
+  line-height: 1.8;
+  overflow-x: hidden;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* ===== UTILITY ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--gray-500);
+  max-width: 640px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+
+.text-center { text-align: center; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 40px;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--gradient-accent);
+  color: var(--white);
+  box-shadow: 0 4px 20px rgba(29,161,242,0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(29,161,242,0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.8);
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-large {
+  padding: 20px 56px;
+  font-size: 1.1rem;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: var(--transition);
+}
+
+.header.scrolled {
+  background: rgba(26,26,46,0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--white);
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white);
+}
+
+.nav { display: flex; align-items: center; gap: 32px; }
+
+.nav a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav a:hover { color: var(--white); }
+
+.nav-cta {
+  padding: 10px 24px !important;
+  background: var(--accent) !important;
+  color: var(--white) !important;
+  border-radius: 50px;
+  font-weight: 700 !important;
+}
+
+.nav-cta:hover {
+  background: var(--accent-dark) !important;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
+
+/* ===== HERO ===== */
+.hero {
+  background: var(--gradient-hero);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 100px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(29,161,242,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: heroGlow 8s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(29,161,242,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: heroGlow 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes heroGlow {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.2) translate(30px, -20px); }
+}
+
+/* Floating particles */
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(29,161,242,0.3);
+  border-radius: 50%;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(29,161,242,0.15);
+  border: 1px solid rgba(29,161,242,0.3);
+  border-radius: 50px;
+  padding: 8px 20px;
+  margin-bottom: 32px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-badge span {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.8s ease 0.1s both;
+}
+
+.hero h1 .accent {
+  color: var(--accent);
+  position: relative;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 600px;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-stat-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== SOCIAL PROOF BAR ===== */
+.social-proof {
+  background: var(--white);
+  padding: 32px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.social-proof-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.social-proof-text {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.social-proof-logos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-proof-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-300);
+  letter-spacing: 0.05em;
+}
+
+/* ===== PROBLEMS ===== */
+.problems {
+  background: var(--gray-50);
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.problem-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--gray-200);
+}
+
+.problem-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.problem-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #fff0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.problem-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+/* ===== REASONS ===== */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.reason-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px 36px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.reason-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-accent);
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+
+.reason-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.reason-card:hover::before {
+  transform: scaleX(1);
+}
+
+.reason-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.reason-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  background: var(--accent-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-icon svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.reason-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.reason-card p {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.8;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  background: var(--gray-50);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  display: flex;
+  gap: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  background: var(--accent-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+/* ===== RESULTS ===== */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.result-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.result-category {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.result-period {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
+.result-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.result-metrics {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.result-metric {
+  flex: 1;
+}
+
+.result-metric-label {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.result-metric-value {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--gray-300);
+}
+
+.result-metric-value.after {
+  color: var(--accent);
+}
+
+.result-bar-container {
+  background: var(--gray-100);
+  border-radius: 8px;
+  height: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.result-bar {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: 8px;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.result-bar-container.animated .result-bar {
+  width: var(--bar-width);
+}
+
+.result-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  padding: 4px 12px;
+  background: #e8f8ee;
+  color: var(--success);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.result-change svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--success);
+}
+
+/* ===== PRICING ===== */
+.pricing {
+  background: var(--gray-50);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.pricing-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 44px 36px;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--gray-200);
+  transition: var(--transition);
+  position: relative;
+  text-align: center;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.pricing-card.popular {
+  border-color: var(--accent);
+  transform: scale(1.04);
+  box-shadow: var(--shadow-xl);
+  z-index: 2;
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.04) translateY(-4px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-accent);
+  color: var(--white);
+  padding: 6px 24px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pricing-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-600);
+  margin-bottom: 8px;
+}
+
+.pricing-price {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.pricing-price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray-400);
+}
+
+.pricing-note {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  margin-bottom: 28px;
+}
+
+.pricing-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+.pricing-features li {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.pricing-features li:last-child { border-bottom: none; }
+
+.pricing-check {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: #e8f8ee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-check svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--success);
+  fill: none;
+  stroke-width: 3;
+}
+
+.pricing-card .btn {
+  width: 100%;
+}
+
+.pricing-card.popular .btn-primary {
+  background: var(--gradient-accent);
+}
+
+/* ===== FLOW ===== */
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.flow-grid::before {
+  content: '';
+  position: absolute;
+  top: 52px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: var(--gray-200);
+  z-index: 0;
+}
+
+.flow-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-number {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  background: var(--gradient-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--white);
+  position: relative;
+  box-shadow: 0 4px 15px rgba(29,161,242,0.3);
+}
+
+.flow-number::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(29,161,242,0.2);
+}
+
+.flow-step h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.flow-step p {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+/* ===== FAQ ===== */
+.faq {
+  background: var(--gray-50);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  border-color: var(--accent);
+}
+
+.faq-question {
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 16px;
+}
+
+.faq-question h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+.faq-toggle {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background: var(--gray-100);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.faq-item.active .faq-toggle {
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+
+.faq-toggle svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--gray-500);
+  fill: none;
+  stroke-width: 2;
+}
+
+.faq-item.active .faq-toggle svg {
+  stroke: var(--white);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer-inner {
+  padding: 0 28px 24px;
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.8;
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: var(--gradient-cta);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(29,161,242,0.1) 0%, transparent 60%);
+  border-radius: 50%;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.cta p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.cta-note {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--primary);
+  color: rgba(255,255,255,0.5);
+  padding: 60px 0 32px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand .logo {
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.footer-col h4 {
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  padding: 4px 0;
+  transition: var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+/* ===== MOBILE NAV OVERLAY ===== */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26,26,46,0.98);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.mobile-nav.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav a {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .reasons-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pricing-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pricing-card { padding: 36px 24px; }
+  .flow-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .results-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+
+  .nav { display: none; }
+  .hamburger { display: flex; }
+  .mobile-nav { display: flex; }
+
+  .hero { padding: 100px 0 80px; min-height: auto; }
+  .hero h1 { font-size: 2rem; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  .hero-stat-value { font-size: 1.5rem; }
+
+  .reasons-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .services-grid { grid-template-columns: 1fr; }
+  .results-grid { grid-template-columns: 1fr; }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .pricing-card.popular { transform: none; }
+  .pricing-card.popular:hover { transform: translateY(-4px); }
+
+  .flow-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .flow-grid::before { display: none; }
+
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; }
+  .result-metrics { flex-direction: column; gap: 12px; }
+  .social-proof-logos { gap: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+      X-Boost
+    </a>
+    <nav class="nav">
+      <a href="#problems">お悩み</a>
+      <a href="#reasons">選ばれる理由</a>
+      <a href="#services">サービス</a>
+      <a href="#results">実績</a>
+      <a href="#pricing">料金</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cta" class="nav-cta">無料相談する</a>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#problems" class="mobile-nav-link">お悩み</a>
+  <a href="#reasons" class="mobile-nav-link">選ばれる理由</a>
+  <a href="#services" class="mobile-nav-link">サービス</a>
+  <a href="#results" class="mobile-nav-link">実績</a>
+  <a href="#pricing" class="mobile-nav-link">料金</a>
+  <a href="#faq" class="mobile-nav-link">FAQ</a>
+  <a href="#cta" class="btn btn-primary">無料相談する</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="particles" id="particles"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>X（Twitter）運用に完全特化</span>
+      </div>
+      <h1>X（Twitter）運用、<br><span class="accent">まるごとお任せ</span>ください</h1>
+      <p>フォロワー増加・エンゲージメント向上・売上直結のX運用を、プロチームが完全代行。あなたのビジネスを、Xの力で加速させます。</p>
+      <div class="hero-buttons">
+        <a href="#cta" class="btn btn-primary btn-large">
+          無料相談する
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn btn-outline btn-large">サービス詳細を見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value counter" data-target="300">0</span>
+          <span class="hero-stat-label">累計支援アカウント数</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value"><span class="counter" data-target="98">0</span>%</span>
+          <span class="hero-stat-label">クライアント継続率</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value"><span class="counter" data-target="150">0</span>%</span>
+          <span class="hero-stat-label">平均エンゲージメント改善率</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="social-proof">
+  <div class="container">
+    <div class="social-proof-inner">
+      <span class="social-proof-text">多くの企業様にご利用いただいています</span>
+      <div class="social-proof-logos">
+        <span class="social-proof-logo">SAMPLE Inc.</span>
+        <span class="social-proof-logo">TOKYO FOODS</span>
+        <span class="social-proof-logo">STYLE BRAND</span>
+        <span class="social-proof-logo">TECH LAB</span>
+        <span class="social-proof-logo">BEAUTY Co.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="section problems" id="problems">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Problems</span>
+      <h2 class="section-title">こんなお悩みありませんか？</h2>
+      <p class="section-subtitle">X（Twitter）の運用でこんな壁にぶつかっていませんか？<br>一つでも当てはまるなら、X-Boostがお力になれます。</p>
+    </div>
+    <div class="problems-grid">
+      <div class="problem-card reveal reveal-delay-1">
+        <div class="problem-icon">😞</div>
+        <div class="problem-text">投稿しても反応がない</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-2">
+        <div class="problem-icon">📉</div>
+        <div class="problem-text">フォロワーが全然増えない</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-3">
+        <div class="problem-icon">🤔</div>
+        <div class="problem-text">何を投稿すればいいかわからない</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-4">
+        <div class="problem-icon">⏰</div>
+        <div class="problem-text">運用に時間が取られて本業に集中できない</div>
+      </div>
+      <div class="problem-card reveal reveal-delay-5">
+        <div class="problem-icon">🔥</div>
+        <div class="problem-text">炎上が怖くて積極的に発信できない</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section class="section" id="reasons">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Why X-Boost?</span>
+      <h2 class="section-title">X-Boostが選ばれる3つの理由</h2>
+      <p class="section-subtitle">X（Twitter）だけに特化しているからこそ、圧倒的な成果をお届けできます。</p>
+    </div>
+    <div class="reasons-grid">
+      <div class="reason-card reveal reveal-delay-1">
+        <span class="reason-number">1</span>
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>X（Twitter）完全特化の<br>専門チーム</h3>
+        <p>Instagram でも TikTok でもなく、Xだけに全力集中。プラットフォームの仕組みを知り尽くしたプロが担当します。</p>
+      </div>
+      <div class="reason-card reveal reveal-delay-2">
+        <span class="reason-number">2</span>
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg>
+        </div>
+        <h3>データに基づいた運用<br>（独自の分析手法）</h3>
+        <p>Xの仕組みを独自に分析。「なんとなく」の運用ではなく、数値に裏付けされた戦略で確実に成果を出します。</p>
+      </div>
+      <div class="reason-card reveal reveal-delay-3">
+        <span class="reason-number">3</span>
+        <div class="reason-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>企画から改善まで<br>まるっとお任せ</h3>
+        <p>投稿の企画・制作・分析・改善まで、すべてワンストップで対応。お客様は本業に集中できます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Services</span>
+      <h2 class="section-title">サービス内容</h2>
+      <p class="section-subtitle">X運用に必要なすべてを、ワンストップでご提供します。</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <h3>アカウント設計</h3>
+          <p>プロフィールの最適化、ターゲットとなるお客様像の設計、ブランドの方向性の決定など、運用の土台をしっかり作ります。</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <div>
+          <h3>コンテンツ企画・制作</h3>
+          <p>月30〜60本の投稿を企画・制作。お客様の業界やターゲットに合わせた、反応が取れるコンテンツを作成します。</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <h3>エンゲージメント施策</h3>
+          <p>リプライ戦略、引用リポスト活用、いいね・フォロー施策など、フォロワーとの関係を深める施策を実施します。</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        </div>
+        <div>
+          <h3>分析レポート</h3>
+          <p>月次・週次のレポートで運用状況を見える化。数値に基づいた改善提案で、成果を着実に伸ばしていきます。</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-5">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div>
+          <h3>トレンド対応</h3>
+          <p>話題になっている出来事にリアルタイムで対応。タイミングを逃さず、拡散されやすい投稿を素早く発信します。</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-5">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3>炎上対策・リスク管理</h3>
+          <p>24時間体制でアカウントを監視。万が一の炎上リスクにも即座に対応し、ブランドイメージを守ります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="section" id="results">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Results</span>
+      <h2 class="section-title">導入企業の成果（※架空の実績例）</h2>
+      <p class="section-subtitle">X-Boostを導入された企業様の成果の一例をご紹介します。</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal reveal-delay-1">
+        <div class="result-header">
+          <span class="result-category">飲食チェーン</span>
+          <span class="result-period">3ヶ月間</span>
+        </div>
+        <h3>フォロワー数が15倍に急成長</h3>
+        <div class="result-metrics">
+          <div class="result-metric">
+            <span class="result-metric-label">導入前</span>
+            <span class="result-metric-value">800人</span>
+          </div>
+          <div class="result-metric">
+            <span class="result-metric-label">導入後</span>
+            <span class="result-metric-value after counter-result" data-target="12000">0人</span>
+          </div>
+        </div>
+        <div class="result-bar-container" data-width="95">
+          <div class="result-bar" style="--bar-width: 95%"></div>
+        </div>
+        <div class="result-change">
+          <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+          1,400% 増加
+        </div>
+      </div>
+
+      <div class="result-card reveal reveal-delay-2">
+        <div class="result-header">
+          <span class="result-category">アパレルEC</span>
+          <span class="result-period">4ヶ月間</span>
+        </div>
+        <h3>エンゲージメント率と売上が大幅UP</h3>
+        <div class="result-metrics">
+          <div class="result-metric">
+            <span class="result-metric-label">エンゲージメント率</span>
+            <span class="result-metric-value">0.5%</span>
+          </div>
+          <div class="result-metric">
+            <span class="result-metric-label">改善後</span>
+            <span class="result-metric-value after">4.8%</span>
+          </div>
+        </div>
+        <div class="result-bar-container" data-width="85">
+          <div class="result-bar" style="--bar-width: 85%"></div>
+        </div>
+        <div class="result-change">
+          <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+          月間売上 230% UP
+        </div>
+      </div>
+
+      <div class="result-card reveal reveal-delay-3">
+        <div class="result-header">
+          <span class="result-category">SaaSスタートアップ</span>
+          <span class="result-period">6ヶ月間</span>
+        </div>
+        <h3>リード獲得数（見込み客）が6倍に</h3>
+        <div class="result-metrics">
+          <div class="result-metric">
+            <span class="result-metric-label">導入前</span>
+            <span class="result-metric-value">月200件</span>
+          </div>
+          <div class="result-metric">
+            <span class="result-metric-label">導入後</span>
+            <span class="result-metric-value after">月1,200件</span>
+          </div>
+        </div>
+        <div class="result-bar-container" data-width="90">
+          <div class="result-bar" style="--bar-width: 90%"></div>
+        </div>
+        <div class="result-change">
+          <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+          600% 増加
+        </div>
+      </div>
+
+      <div class="result-card reveal reveal-delay-4">
+        <div class="result-header">
+          <span class="result-category">美容クリニック</span>
+          <span class="result-period">5ヶ月間</span>
+        </div>
+        <h3>X経由の予約数が月3件→85件に</h3>
+        <div class="result-metrics">
+          <div class="result-metric">
+            <span class="result-metric-label">導入前</span>
+            <span class="result-metric-value">月3件</span>
+          </div>
+          <div class="result-metric">
+            <span class="result-metric-label">導入後</span>
+            <span class="result-metric-value after">月85件</span>
+          </div>
+        </div>
+        <div class="result-bar-container" data-width="88">
+          <div class="result-bar" style="--bar-width: 88%"></div>
+        </div>
+        <div class="result-change">
+          <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+          2,733% 増加
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Pricing</span>
+      <h2 class="section-title">料金プラン</h2>
+      <p class="section-subtitle">ビジネスの規模や目的に合わせて、最適なプランをお選びいただけます。</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Light -->
+      <div class="pricing-card reveal reveal-delay-1">
+        <div class="pricing-name">ライトプラン</div>
+        <div class="pricing-price">9.8<span>万円/月</span></div>
+        <div class="pricing-note">税別</div>
+        <ul class="pricing-features">
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>月15投稿</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>アカウント設計</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>月次レポート</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>専任担当者</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>メールサポート</li>
+        </ul>
+        <a href="#cta" class="btn btn-white">お問い合わせ</a>
+      </div>
+
+      <!-- Standard (Popular) -->
+      <div class="pricing-card popular reveal reveal-delay-2">
+        <div class="popular-badge">一番人気</div>
+        <div class="pricing-name">スタンダードプラン</div>
+        <div class="pricing-price">19.8<span>万円/月</span></div>
+        <div class="pricing-note">税別</div>
+        <ul class="pricing-features">
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>月30投稿</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>アカウント設計</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>週次レポート</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>リプライ対応</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>トレンド対応</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>チャットサポート</li>
+        </ul>
+        <a href="#cta" class="btn btn-primary">お問い合わせ</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="pricing-card reveal reveal-delay-3">
+        <div class="pricing-name">プレミアムプラン</div>
+        <div class="pricing-price">39.8<span>万円/月</span></div>
+        <div class="pricing-note">税別</div>
+        <ul class="pricing-features">
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>月60投稿</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>アカウント設計</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>日次モニタリング</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>炎上対策</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>広告運用代行</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>専用Slackチャンネル</li>
+          <li><span class="pricing-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>月1回の戦略会議</li>
+        </ul>
+        <a href="#cta" class="btn btn-white">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="section" id="flow">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Flow</span>
+      <h2 class="section-title">ご利用の流れ</h2>
+      <p class="section-subtitle">お問い合わせから運用開始まで、最短1週間でスタートできます。</p>
+    </div>
+    <div class="flow-grid">
+      <div class="flow-step reveal reveal-delay-1">
+        <div class="flow-number">1</div>
+        <h3>無料相談</h3>
+        <p>現在の状況やお悩みをヒアリング。最適なプランをご提案します。</p>
+      </div>
+      <div class="flow-step reveal reveal-delay-2">
+        <div class="flow-number">2</div>
+        <h3>戦略設計</h3>
+        <p>ターゲット分析・競合調査を行い、具体的な運用戦略を策定します。</p>
+      </div>
+      <div class="flow-step reveal reveal-delay-3">
+        <div class="flow-number">3</div>
+        <h3>運用開始</h3>
+        <p>戦略に基づいたコンテンツ制作・投稿をスタート。随時調整を行います。</p>
+      </div>
+      <div class="flow-step reveal reveal-delay-4">
+        <div class="flow-number">4</div>
+        <h3>月次レポート＆改善</h3>
+        <p>成果を数値で可視化。データに基づいた改善を継続的に実施します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">よくあるご質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal reveal-delay-1">
+        <div class="faq-question">
+          <h3>契約期間の縛りはありますか？</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">最低契約期間は3ヶ月です。X運用の成果は短期間では出にくいため、3ヶ月以上の継続をおすすめしています。3ヶ月以降は1ヶ月単位で更新いただけます。</div>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-2">
+        <div class="faq-question">
+          <h3>どのくらいで成果が出ますか？</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">多くの場合、1〜2ヶ月目で反応の変化を感じていただけます。フォロワー数の大幅な増加や売上への影響は、3〜6ヶ月を目安にお考えください。業界やアカウントの状態によっても異なります。</div>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-3">
+        <div class="faq-question">
+          <h3>投稿内容の確認はできますか？</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">はい、もちろんです。投稿前に内容をご確認いただく承認フローを設けています。ご要望に応じて修正も可能です。</div>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-4">
+        <div class="faq-question">
+          <h3>アカウントのパスワードを共有する必要がありますか？</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">X（Twitter）の公式な連携機能を使用するため、パスワードの直接共有は不要です。安全な方法でアカウントへのアクセスを設定いたします。</div>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-5">
+        <div class="faq-question">
+          <h3>炎上した場合の対応はどうなりますか？</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">プレミアムプランでは24時間体制で監視しており、異常を検知した場合は即座に対応します。スタンダードプラン以下でも、営業時間内であれば迅速に対応いたします。炎上リスクを事前に防ぐためのガイドライン作成もサービスに含まれています。</div>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-5">
+        <div class="faq-question">
+          <h3>他のSNS（Instagram、TikTokなど）も対応していますか？</h3>
+          <div class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">X-BoostはX（Twitter）に完全特化したサービスです。特化しているからこそ、他社にはない深い専門性と高い成果をお届けできます。他のSNS運用が必要な場合は、信頼できるパートナー企業をご紹介することも可能です。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <div class="container">
+    <div class="cta-content reveal">
+      <span class="section-label" style="color: rgba(255,255,255,0.5);">Contact</span>
+      <h2>まずは無料で相談する</h2>
+      <p>X（Twitter）運用のプロが、あなたのビジネスに最適な戦略をご提案します。<br>無料相談だけでも、今の運用の改善ポイントが見つかります。</p>
+      <a href="#" class="btn btn-primary btn-large" onclick="return false;">
+        無料相談する（30秒で完了）
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <p class="cta-note">※ 強引な営業は一切いたしません。お気軽にご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+          X-Boost
+        </a>
+        <p>X（Twitter）運用に完全特化した<br>SNS運用代行サービスです。<br>あなたのX運用、プロが全部やります。</p>
+      </div>
+      <div class="footer-col">
+        <h4>サービス</h4>
+        <a href="#services">サービス内容</a>
+        <a href="#results">導入実績</a>
+        <a href="#pricing">料金プラン</a>
+        <a href="#flow">ご利用の流れ</a>
+      </div>
+      <div class="footer-col">
+        <h4>サポート</h4>
+        <a href="#faq">よくあるご質問</a>
+        <a href="#">お問い合わせ</a>
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">特定商取引法</a>
+      </div>
+      <div class="footer-col">
+        <h4>会社情報</h4>
+        <a href="#">運営会社</a>
+        <a href="#">採用情報</a>
+        <a href="#">ブログ</a>
+        <a href="#">X公式アカウント</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 X-Boost. All rights reserved.</span>
+      <span>X（Twitter）運用代行の専門エージェンシー</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== HEADER SCROLL =====
+  const header = document.getElementById('header');
+  let lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    const y = window.scrollY;
+    if (y > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    lastScroll = y;
+  }, { passive: true });
+
+  // ===== HAMBURGER =====
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    mobileNav.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  });
+
+  document.querySelectorAll('.mobile-nav-link, .mobile-nav .btn').forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // ===== PARTICLES =====
+  var particlesContainer = document.getElementById('particles');
+  for (var i = 0; i < 20; i++) {
+    var p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.width = p.style.height = (Math.random() * 4 + 2) + 'px';
+    p.style.animationDuration = (Math.random() * 15 + 10) + 's';
+    p.style.animationDelay = (Math.random() * 10) + 's';
+    p.style.opacity = Math.random() * 0.5 + 0.1;
+    particlesContainer.appendChild(p);
+  }
+
+  // ===== SCROLL REVEAL =====
+  var revealElements = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // ===== ANIMATED COUNTERS =====
+  var counters = document.querySelectorAll('.counter');
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !entry.target.dataset.counted) {
+        entry.target.dataset.counted = 'true';
+        animateCounter(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(function(el) { counterObserver.observe(el); });
+
+  function animateCounter(el) {
+    var target = parseInt(el.dataset.target);
+    var duration = 2000;
+    var start = performance.now();
+    function update(now) {
+      var elapsed = now - start;
+      var progress = Math.min(elapsed / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = Math.floor(eased * target);
+      el.textContent = current.toLocaleString();
+      if (progress < 1) requestAnimationFrame(update);
+      else el.textContent = target.toLocaleString();
+    }
+    requestAnimationFrame(update);
+  }
+
+  // ===== RESULT BARS =====
+  var bars = document.querySelectorAll('.result-bar-container');
+  var barObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  bars.forEach(function(el) { barObserver.observe(el); });
+
+  // ===== FAQ ACCORDION =====
+  document.querySelectorAll('.faq-question').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var inner = answer.querySelector('.faq-answer-inner');
+      var isActive = item.classList.contains('active');
+
+      // Close all others
+      document.querySelectorAll('.faq-item.active').forEach(function(openItem) {
+        if (openItem !== item) {
+          openItem.classList.remove('active');
+          openItem.querySelector('.faq-answer').style.maxHeight = '0';
+        }
+      });
+
+      if (isActive) {
+        item.classList.remove('active');
+        answer.style.maxHeight = '0';
+      } else {
+        item.classList.add('active');
+        answer.style.maxHeight = inner.scrollHeight + 24 + 'px';
+      }
+    });
+  });
+
+  // ===== SMOOTH SCROLL =====
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      var target = document.querySelector(href);
+      if (target) {
+        var offset = 80;
+        var y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
